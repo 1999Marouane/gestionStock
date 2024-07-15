@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class gestionController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * controller prodact
      */
     public function index()
     {
-        //
+        $Products = Product::all();
+        return view('all.index',compact('Products'));
     }
 
     /**
